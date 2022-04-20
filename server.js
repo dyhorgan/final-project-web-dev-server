@@ -6,7 +6,7 @@ import profileController from "./controllers/profile-controllers.js"
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.get('/hello', (req, res) => {res.send('Hello World!')})
+app.get('/hello', (req, res) => {res.send('Hello World')})
 app.get('/', (req, res) => {res.send('Welcome to my Final Project!')})
 profileController(app);
 app.listen(process.env.PORT || 4000);
