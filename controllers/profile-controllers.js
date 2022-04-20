@@ -3,7 +3,7 @@ import profileDao from "../profile/profile-dao.js";
 
 const findAllProfiles = async (req, res) => {
   const profiles = await profileDao.findAllProfiles()
-  console.log("blah");
+  console.log("blah!");
   res.json(profiles);
 }
 
