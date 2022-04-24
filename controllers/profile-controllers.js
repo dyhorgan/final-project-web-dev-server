@@ -3,14 +3,13 @@ import profileDao from "../profile/profile-dao.js";
 
 const findAllProfiles = async (req, res) => {
   const profiles = await profileDao.findAllProfiles()
-  console.log("blah!");
+
   res.json(profiles);
 }
 
  const createProfile = async (req, res) => {
   const newProfile = req.body;
   const insertedProfile = await profileDao.createProfile(newProfile);
-
   res.json(insertedProfile);
  }
 
