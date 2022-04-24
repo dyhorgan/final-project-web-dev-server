@@ -14,7 +14,6 @@ const findAllProfiles = async (req, res) => {
    res.json(insertedProfile);
   }catch(err){
     console.log("failed in controller");
-    console.log(err)
   }
 }
 

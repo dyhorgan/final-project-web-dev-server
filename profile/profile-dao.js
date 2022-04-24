@@ -4,11 +4,9 @@ export const findAllProfiles = () => {
 };
 export const createProfile = (profile) => {
   try{
-    console.log("succeeded?");
     return profileModel.create(profile)
   }catch(err){
-    console.log("FIRING!!!!!");
-    console.log(err);
+    console.log("failed in dao")
   }
 };
 export const deleteProfile = (pid) => profileModel.deleteOne({_id: pid});
