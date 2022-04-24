@@ -12,9 +12,4 @@ profileController(app);
 app.listen(process.env.PORT || 4000);
 const CONNECTION_STRING = "mongodb+srv://dhorgan:Ho.66421@cluster0.robom.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-mongoose.connect(CONNECTION_STRING, {
-                                            useUnifiedTopology: true,
-                                            useNewUrlParser: true,
-                                            useCreateIndex: true,
-                                            autoIndex: true,
-                                        }).then("connected to mongo db");
+mongoose.connect(CONNECTION_STRING);
