@@ -4,7 +4,7 @@ export const findAllProfiles = () => {
 };
 export const createProfile = (profile) => {
   try{
-    profileModel.create(profile)
+    return profileModel.create(profile)
   }catch(err){
     console.log(err);
   }
