@@ -6,6 +6,7 @@ export const createProfile = (profile) => {
   try{
     return profileModel.create(profile)
   }catch(err){
+    console.log("FIRING!!!!!");
     console.log(err);
   }
 };
