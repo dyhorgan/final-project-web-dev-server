@@ -8,10 +8,14 @@ const findAllProfiles = async (req, res) => {
 }
 
  const createProfile = async (req, res) => {
-  const newProfile = req.body;
-  const insertedProfile = await profileDao.createProfile(newProfile);
-  res.json(insertedProfile);
- }
+  try{
+   const newProfile = req.body;
+   const insertedProfile = await profileDao.createProfile(newProfile);
+   res.json(insertedProfile);
+  }catch(err){
+    console.log(err)
+  }
+}
 
  const deleteProfile = async (req, res) => {
   const profileIdToDelete = req.params.pid;
