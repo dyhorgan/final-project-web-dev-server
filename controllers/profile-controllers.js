@@ -13,6 +13,7 @@ const findAllProfiles = async (req, res) => {
    const insertedProfile = await profileDao.createProfile(newProfile);
    res.json(insertedProfile);
   }catch(err){
+    console.log("failed in controller");
     console.log(err)
   }
 }
