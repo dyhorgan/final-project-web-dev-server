@@ -10,6 +10,7 @@ const findAllProfiles = async (req, res) => {
 
  const createProfile = async (req, res) => {
   try{
+   console.log("firing create controller in server");
    const newProfile = req.body;
    const insertedProfile = await profileDao.createProfile(newProfile);
    res.json(insertedProfile);
