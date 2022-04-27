@@ -2,6 +2,14 @@ import profileModel from './profile-model.js';
 export const findAllProfiles = () => {
   return profileModel.find();
 };
+
+export const findOneProfile = (username, password) => {
+  try{
+    return profileModel.findOne({username, password});
+  }catch(err){
+    console.log(err);
+  }
+}
 export const createProfile = (profile) => {
   try{
     console.log("firing in dao")
