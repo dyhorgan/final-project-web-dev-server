@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.get('/hello', (req, res) => {res.send('Hello World')})
 app.get('/', (req, res) => {res.send('Welcome to my Final Project!')})
-profileController(app);
+//profileController(app);
 app.listen(process.env.PORT || 4000);
 const CONNECTION_STRING = "mongodb+srv://dhorgan:Ho.66421@cluster0.robom.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
