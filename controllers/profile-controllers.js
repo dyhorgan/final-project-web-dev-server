@@ -11,6 +11,7 @@ const findAllProfiles = async (req, res) => {
 const findOneProfile = async (req, res) => {
   console.log("logging req in server in controller")
   console.log(req.params);
+  console.log(req.body);
   const profile = await profileDao.findOneProfile(req.params.username, req.params.password);
 
   res.json(profile);
