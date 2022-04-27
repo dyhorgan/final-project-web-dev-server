@@ -4,6 +4,7 @@ export const findAllProfiles = () => {
 };
 export const createProfile = (profile) => {
   try{
+    console.log("firing in dao")
     return profileModel.create(profile)
   }catch(err){
     console.log("failed in dao")
