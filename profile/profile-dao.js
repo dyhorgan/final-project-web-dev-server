@@ -5,7 +5,9 @@ export const findAllProfiles = () => {
 
 export const findOneProfile = (username, password) => {
   try{
-    return profileModel.findOne({username, password});
+    console.log("logging username in findOneProfile")
+    console.log(username);
+    return profileModel.findOne({username: username, password: password});
   }catch(err){
     console.log(err);
   }
@@ -21,4 +23,4 @@ export const createProfile = (profile) => {
 export const deleteProfile = (pid) => profileModel.deleteOne({_id: pid});
 export const updateProfile = (pid, profile) => profileModel.updateOne({_id: pid}, {$set: profile})
 
-export default {createProfile, deleteProfile, updateProfile, findAllProfiles};
+export default {createProfile, deleteProfile, updateProfile, findAllProfiles, findOneProfile};
