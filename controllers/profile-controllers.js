@@ -2,6 +2,7 @@
 import profileDao from "../profile/profile-dao.js";
 
 const findAllProfiles = async (req, res) => {
+  console.log("firing profile controller");
   const profiles = await profileDao.findAllProfiles()
 
   res.json(profiles);
