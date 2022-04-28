@@ -1,6 +1,8 @@
 import reviewModel from './review-model.js';
-export const findAllReviews = () => {
-  return reviewModel.find();
+export const findAllReviews = (uid) => {
+  console.log("logging uid in review dao");
+  console.log(uid);
+  return reviewModel.find({userId: uid});
 };
 
 export const findOneReview = (id) => {

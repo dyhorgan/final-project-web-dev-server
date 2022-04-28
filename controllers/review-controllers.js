@@ -3,7 +3,7 @@ import reviewDao from "../review/review-dao.js";
 
 const findAllReviews = async (req, res) => {
 
-  const reviews = await reviewDao.findAllReviews()
+  const reviews = await reviewDao.findAllReviews(req.query.id)
 
   res.json(reviews);
 }
