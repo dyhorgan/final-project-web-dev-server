@@ -1,6 +1,6 @@
 import favoriteModel from './favorite-model.js';
-export const findAllFavorites = () => {
-  return favoriteModel.find();
+export const findAllFavorites = (obj) => {
+  return favoriteModel.find(obj);
 };
 
 export const findOneFavorite = (id) => {
