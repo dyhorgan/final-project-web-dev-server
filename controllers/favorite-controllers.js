@@ -2,7 +2,12 @@
 import favoriteDao from "../favorite/favorite-dao.js";
 
 const findAllFavorites = async (req, res) => {
-
+  console.log("logging body")
+  console.log(req.body);
+  console.log("logging params")
+  console.log(req.params);
+  console.log("logging query")
+  console.log(req.query);
   const favorites = await favoriteDao.findAllFavorites(req.query.id)
 
   res.json(favorites);
