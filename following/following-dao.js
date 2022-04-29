@@ -1,9 +1,10 @@
 import followingModel from './following-model.js';
+
 export const findAllFollowing = (followingId) => {
   return followingModel.find({followingId});
 };
-export const findAllFollowers = (followerId) => {
-  return followingModel.find({followerId})
+export const findAllFollowers = (followingId) => {
+  return followingModel.find({followingId})
 };
 
 export const findOneFollowing = (id) => {
