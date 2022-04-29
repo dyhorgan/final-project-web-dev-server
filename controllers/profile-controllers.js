@@ -34,8 +34,14 @@ const findOneProfile = async (req, res) => {
  }
 
  const updateProfile = async (req, res) => {
-   const profileIdToUpdate = req.params.tid;
+   const profileIdToUpdate = req.params.id;
    const updatedProfile = req.body;
+   console.log("logging params in profile");
+   console.log(req.params);
+   console.log("logging body in profile");
+   console.log(req.body);
+   console.log("logging query in profile");
+   console.log(req.query);
    const status = await profileDao.updateProfile(profileIdToUpdate, updatedProfile);
 //   tuits = tuits.map(t => t._id === tuitdIdToUpdate ? updatedTuit : t);
    res.send(status);
