@@ -2,7 +2,12 @@
 import followingDao from "../following/following-dao.js";
 
 const findAllFollowing = async (req, res) => {
-
+  console.log("body");
+    console.log(req.body);
+    console.log("query");
+    console.log(req.query);
+    console.log("params");
+    console.log(req.params);
   const following = await followingDao.findAllFollowing(req.query.id);
   console.log(following)
 
@@ -10,6 +15,12 @@ const findAllFollowing = async (req, res) => {
 }
 
 const findAllFollowers = async (req, res) => {
+  console.log("body");
+  console.log(req.body);
+  console.log("query");
+  console.log(req.query);
+  console.log("params");
+  console.log(req.params);
 
   const followers = await followingDao.findAllFollowers(req.query.id);
   console.log(followers);
