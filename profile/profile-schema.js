@@ -3,7 +3,7 @@ const schema = mongoose.Schema({
   username: {type: String, unique: true},
   password: {type: String},
   bio: {type: String},
-  imageURL: {type: String}
+  imageUrl: {type: String}
 }, {collection: 'profile'});
 
 schema.path('username').validate(async (username) => {
