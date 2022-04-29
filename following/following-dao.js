@@ -3,11 +3,13 @@ import followingModel from './following-model.js';
 export const findAllFollowing = (followingId) => {
   console.log("logging in find all followers - followingId")
   console.log(followingId);
+
   return followingModel.find({followingId});
 };
 export const findAllFollowers = (followerId) => {
   console.log("logging in find all followers - followerId")
   console.log(followerId);
+
   return followingModel.find({followerId})
 };
 
