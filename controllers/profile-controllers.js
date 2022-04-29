@@ -35,7 +35,7 @@ const findOneProfile = async (req, res) => {
 
  const updateProfile = async (req, res) => {
    const profileIdToUpdate = req.params.pid;
-   const updatedProfile = req.body;
+   const updatedProfile = req.body.body;
    console.log("logging params in profile");
    console.log(req.params);
    console.log("logging body in profile");
