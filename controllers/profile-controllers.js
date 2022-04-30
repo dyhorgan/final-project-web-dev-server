@@ -16,18 +16,18 @@ const findOneProfile = async (req, res) => {
 }
 
 const findProfileById = async (req, res) => {
-  console.log("params");
+  console.log("params in id");
   console.log(req.params);
-  console.log("body");
+  console.log("body in id");
   console.log(req.body);
-  console.log("query");
+  console.log("query in id");
   console.log(req.query);
   const profile = await profileDao.findProfileById(req.query.id)
 }
 
  const createProfile = async (req, res) => {
   try{
-   console.log("firing create controller in server");
+
    const newProfile = req.body;
    const insertedProfile = await profileDao.createProfile(newProfile);
    res.json(insertedProfile);
@@ -46,14 +46,7 @@ const findProfileById = async (req, res) => {
  const updateProfile = async (req, res) => {
    const profileIdToUpdate = req.params.pid;
    const updatedProfile = req.body.body;
-   console.log("logging params in profile");
-   console.log(req.params);
-   console.log("logging body in profile");
-   console.log(req.body);
-   console.log("logging query in profile");
-   console.log(req.query);
-   console.log("logging profileIdToUpdate");
-   console.log(profileIdToUpdate);
+
    const status = await profileDao.updateProfile(profileIdToUpdate, updatedProfile);
 //   tuits = tuits.map(t => t._id === tuitdIdToUpdate ? updatedTuit : t);
     console.log("status: ");

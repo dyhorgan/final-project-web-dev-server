@@ -2,12 +2,7 @@
 import reviewDao from "../review/review-dao.js";
 
 const findAllReviews = async (req, res) => {
-  console.log("logging query");
-  console.log(req.query);
-  console.log("logging params")
-  console.log(req.params);
-  console.log("logging body")
-  console.log(req.body);
+
   const reviews = await reviewDao.findAllReviews(req.query.uid)
 
   res.json(reviews);
