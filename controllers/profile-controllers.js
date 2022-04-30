@@ -16,6 +16,7 @@ const findOneProfile = async (req, res) => {
 }
 
 const findProfileById = async (req, res) => {
+  console.log("firing findProfileById")
   console.log("params in id");
   console.log(req.params);
   console.log("body in id");
