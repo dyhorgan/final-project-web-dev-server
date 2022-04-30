@@ -3,8 +3,6 @@ import cors from "cors";
 import mongoose from "mongoose";
 import profileController from "./controllers/profile-controllers.js"
 import reviewController from "./controllers/review-controllers.js"
-import movieReviewController from "./controllers/movieReview-controllers.js"
-import userReviewController from "./controllers/userReview-controllers.js"
 import followingController from "./controllers/following-controllers.js"
 import favoriteController from "./controllers/favorite-controllers.js"
 
@@ -15,8 +13,6 @@ app.get('/hello', (req, res) => {res.send('Hello World')})
 app.get('/', (req, res) => {res.send('Welcome to my Final Project!')})
 profileController(app);
 reviewController(app);
-userReviewController(app);
-movieReviewController(app);
 favoriteController(app);
 followingController(app);
 app.listen(process.env.PORT || 4000);
