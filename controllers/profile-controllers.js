@@ -15,6 +15,16 @@ const findOneProfile = async (req, res) => {
   res.json(profile);
 }
 
+const findProfileById = async (req, res) => {
+  console.log("params");
+  console.log(req.params);
+  console.log("body");
+  console.log(req.body);
+  console.log("query");
+  console.log(req.query);
+  const profile = await profileDao.findProfileById(req.query.id)
+}
+
  const createProfile = async (req, res) => {
   try{
    console.log("firing create controller in server");
@@ -55,6 +65,7 @@ export default (app) => {
  app.post('/api/profiles', createProfile);
  app.get('/api/profiles', findAllProfiles);
  app.get('/api/profile', findOneProfile);
+ app.get('/api/profile/:id', findProfileById);
  app.put('/api/profiles/:pid', updateProfile);
  app.delete('/api/profiles/:pid', deleteProfile);
  }

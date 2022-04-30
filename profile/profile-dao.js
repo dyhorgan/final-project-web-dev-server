@@ -5,12 +5,18 @@ export const findAllProfiles = () => {
 
 export const findOneProfile = (username, password) => {
   try{
-    console.log("logging username in findOneProfile")
-    console.log(username);
     return profileModel.findOne({username: username, password: password});
   }catch(err){
     console.log(err);
   }
+}
+
+export const findProfileById = (id) => {
+   try{
+      return profileModel.findById(id);
+    }catch(err){
+      console.log(err);
+    }
 }
 export const createProfile = (profile) => {
   try{
