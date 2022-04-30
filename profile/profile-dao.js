@@ -1,4 +1,6 @@
 import profileModel from './profile-model.js';
+import mongoose from "mongoose";
+
 export const findAllProfiles = () => {
   return profileModel.find();
 };
@@ -13,8 +15,7 @@ export const findOneProfile = (username, password) => {
 
 export const findProfileById = (id) => {
    try{
-      console.log("firing in dao");
-      console.log(id);
+
       return profileModel.findById(id);
     }catch(err){
       console.log(err);

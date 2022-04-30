@@ -20,7 +20,8 @@ const findProfileById = async (req, res) => {
   console.log("params in id");
   console.log(req.params);
 
-  const profile = await profileDao.findProfileById(req.params.id)
+  const profile = await profileDao.findProfileById(req.params.id);
+  res.json(profile);
 }
 
  const createProfile = async (req, res) => {
