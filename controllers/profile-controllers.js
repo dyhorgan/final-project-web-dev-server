@@ -16,13 +16,10 @@ const findOneProfile = async (req, res) => {
 }
 
 const findProfileById = async (req, res) => {
-  console.log("firing findProfileById")
+  console.log("firing findProfileById in controller");
   console.log("params in id");
   console.log(req.params);
-  console.log("body in id");
-  console.log(req.body);
-  console.log("query in id");
-  console.log(req.query);
+
   const profile = await profileDao.findProfileById(req.params.id)
 }
 
