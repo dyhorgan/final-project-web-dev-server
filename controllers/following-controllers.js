@@ -62,7 +62,7 @@ const findOneFollowing = async (req, res) => {
 export default (app) => {
  app.post('/api/following', createFollowing);
  app.get('/api/following', findAllFollowing);
- app.get('/api/following', findAllFollowers);
+ app.get('/api/followers', findAllFollowers);
  app.get('/api/following/:id', findOneFollowing);
  app.put('/api/following/:fid', updateFollowing);
  app.delete('/api/following/:fid', deleteFollowing);
