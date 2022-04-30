@@ -14,6 +14,7 @@ export const findOneProfile = (username, password) => {
 export const findProfileById = (id) => {
    try{
       console.log("firing in dao");
+      console.log(id);
       return profileModel.findById(id);
     }catch(err){
       console.log(err);

@@ -23,7 +23,7 @@ const findProfileById = async (req, res) => {
   console.log(req.body);
   console.log("query in id");
   console.log(req.query);
-  const profile = await profileDao.findProfileById(req.query.id)
+  const profile = await profileDao.findProfileById(req.params.id)
 }
 
  const createProfile = async (req, res) => {
@@ -59,7 +59,7 @@ export default (app) => {
  app.post('/api/profiles', createProfile);
  app.get('/api/profiles', findAllProfiles);
  app.get('/api/profile', findOneProfile);
- app.get('/api/profileById', findProfileById);
+ app.get('/api/profiles/:id', findProfileById);
  app.put('/api/profiles/:pid', updateProfile);
  app.delete('/api/profiles/:pid', deleteProfile);
  }
