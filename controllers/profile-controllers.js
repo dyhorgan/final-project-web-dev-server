@@ -59,7 +59,7 @@ export default (app) => {
  app.post('/api/profiles', createProfile);
  app.get('/api/profiles', findAllProfiles);
  app.get('/api/profile', findOneProfile);
- app.get('/api/profiles/:id', findProfileById);
+ app.get('/api/profileById', findProfileById);
  app.put('/api/profiles/:pid', updateProfile);
  app.delete('/api/profiles/:pid', deleteProfile);
  }
