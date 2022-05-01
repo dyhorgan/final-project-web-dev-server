@@ -10,6 +10,7 @@ const findAllReviews = async (req, res) => {
 
 const findAllReviewsByMovie = async (req, res) => {
   const reviews =  await reviewDao.findAllReviewsByMovie(req.params.mid)
+  res.json(reviews);
 }
 
 const findOneReview = async (req, res) => {

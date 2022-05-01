@@ -6,6 +6,7 @@ export const findAllReviews = (uid) => {
 };
 
 export const findAllReviewsByMovie = (mid) => {
+  console.log("mid " + mid);
   return reviewModel.find({movieId: mid});
 }
 
