@@ -8,6 +8,10 @@ const findAllReviews = async (req, res) => {
   res.json(reviews);
 }
 
+const findAllReviewsByMovie = async (req, res) => {
+  const reviews =  await reviewDao.findAllReviewsByMovie(req.params.mid)
+}
+
 const findOneReview = async (req, res) => {
 
   const review = await reviewDao.findOneReview(req.query.id);
@@ -42,6 +46,7 @@ const findOneReview = async (req, res) => {
 export default (app) => {
  app.post('/api/reviews', createReview);
  app.get('/api/reviews', findAllReviews);
+ app.get('/api/reviews/movie:mid', findAllReviewsByMovie);
  app.get('/api/reviews/:id', findOneReview);
  app.put('/api/reviews/:rid', updateReview);
  app.delete('/api/reviews/:rid', deleteReview);

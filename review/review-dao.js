@@ -5,6 +5,10 @@ export const findAllReviews = (uid) => {
   return reviewModel.find({userId: uid});
 };
 
+export const findAllReviewsByMovie = (mid) => {
+  return reviewModel.find({movieId: mid});
+}
+
 export const findOneReview = (id) => {
   try{
     return reviewModel.findById(id);
@@ -22,4 +26,4 @@ export const createReview = (review) => {
 export const deleteReview = (rid) => reviewModel.deleteOne({_id: rid});
 export const updateReview = (rid, review) => profileModel.updateOne({_id: rid}, {$set: review})
 
-export default {createReview, deleteReview, updateReview, findAllReviews, findOneReview};
+export default {createReview, deleteReview, updateReview, findAllReviews, findOneReview, findAllReviewsByMovie};
