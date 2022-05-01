@@ -5,7 +5,8 @@ const schema = mongoose.Schema({
   bio: {type: String},
   imageUrl: {type: String},
   phone: {type: String},
-  email: {type: String}
+  email: {type: String},
+  admin: {type: Boolean}
 }, {collection: 'profile'});
 
 schema.path('username').validate(async (username) => {
