@@ -46,7 +46,7 @@ const findOneReview = async (req, res) => {
 export default (app) => {
  app.post('/api/reviews', createReview);
  app.get('/api/reviews', findAllReviews);
- app.get('/api/reviews/movie:mid', findAllReviewsByMovie);
+ app.get('/api/reviews/movie/:mid', findAllReviewsByMovie);
  app.get('/api/reviews/:id', findOneReview);
  app.put('/api/reviews/:rid', updateReview);
  app.delete('/api/reviews/:rid', deleteReview);
