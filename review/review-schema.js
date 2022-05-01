@@ -4,7 +4,8 @@ const schema = mongoose.Schema({
   userId: {type: String},
   movieId: {type: String},
   time: {type: Date},
-  title: {type: String}
+  title: {type: String},
+  username: {type: String}
 }, {collection: 'review'});
 
 export default schema;
